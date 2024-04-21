@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Day9Recursion {
@@ -46,6 +47,33 @@ public class Day9Recursion {
         }
         for(int check:set){
             System.out.println(check);
+        }
+    }
+    public static void stdinRemoveDuplicates2() {
+        Scanner sc = new Scanner(System.in);
+        int num,length;
+
+        length=sc.nextInt();
+        int[] ar = new int[length];
+        for(int i=0; i<ar.length; i++){
+            num=sc.nextInt();
+            ar[i]=num;
+        }
+
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < ar.length; i++) {
+            set.add(ar[i]);
+        }
+        for(int check:set){
+            System.out.println(check);
+        }
+    }
+
+    public static int HackerRankWork(int n){
+        if(2<=n&&n<=12){
+            return n* factorial(n);
+        }else {
+            return 1;
         }
     }
 
